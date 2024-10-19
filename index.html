@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CoinMeter</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Fav icon-->
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+
+<div class="wrapper">
+    <!--Nav-->
+    <nav id="nav">
+        <a href="#home">
+            <h1>
+                <i class="fa-solid fa-chart-simple logo"></i>
+                <span id="nav-logo-text">CoinMeter</span>
+            </h1>
+        </a>
+        <div>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#coins" class="nav-link">Coins</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#join" class="nav-link btn-pink">Join</a>
+        </div>
+    </nav>
+
+    <!--Hero & coin list-->
+    <div id="hero-coin-bg">
+        <!--Hero-->
+        <div id="hero">
+            <div class="d-flex">
+                <div class="hero-text col">
+                    <div>
+                        <h1>
+                            Crypto insights <br>
+                            at your fingertips
+                        </h1>
+                        <p>
+                            CoinMeter is a comprehensive online platform that provides real-time information and updates
+                            on
+                            a
+                            wide range of cryptocurrencies.
+                        </p>
+                        <button id="joinButton" class="btn-pink-2">Join mailing list</button>
+                    </div>
+                </div>
+                <lottie-player id="lottie" class="col"
+                               src="https://lottie.host/6f5b9e67-1900-47e6-95e2-77aec6ac4d8e/Eyl2R58no5.json" speed="1"
+                               loop autoplay direction="1" mode="normal"></lottie-player>
+            </div>
+        </div>
+
+        <!--Coin list-->
+        <div id="coins">
+            <div class="container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col" class="text-left">Icon</th>
+                        <th scope="col" class="text-left" id="symbol-header">Symbol</th>
+                        <th scope="col" class="text-left">Name</th>
+                        <th scope="col" class="text-right">Price</th>
+                        <th scope="col" class="text-right" id="market-cap-header">Market Cap</th>
+                        <th scope="col" class="text-right">Volume (24hr)</th>
+                        <th scope="col" class="text-right">Change (24hr)</th>
+                    </tr>
+                    </thead>
+                    <tbody id="resultList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="card card-1">
+                <h2>
+                    <i class="fa-solid fa-circle-info"></i>About
+                </h2>
+                <p>
+                    CoinMeter is a web application that allows users to track information about various
+                    cryptocurrencies.
+                    <br><br> <!--Make p element block in CSS instead-->
+                    It utilizes CSS, Bootstrap and JavaScript to create an interactive user interface that fetches data
+                    from
+                    the <a href="https://docs.coincap.io/" target="_blank">CoinCap.io API</a>.
+                </p>
+            </div>
+            <div class="card card-2">
+                <h2>
+                    <i class="fa-solid fa-list-check"></i>Features
+                </h2>
+                <p>
+                    View a list of the most popular cryptocurrencies.
+                    <br><br>
+                    See data such as price, market cap, volume and more for each cryptocurrency, updated every 10
+                    seconds.
+                    <br><br>
+                    Responsive design that adapts to different screen sizes.
+                </p>
+            </div>
+            <div class="card card-3">
+                <h2>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>Technologies
+                </h2>
+                <p>
+                    HTML + CSS: Used for structure, styling and layout.
+                    <br><br>
+                    JavaScript: Used for implementing interactive functionality and fetching data from the API.
+                    <br><br>
+                    CoinCap API: Used to retrieve cryptocurrency data.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer id="join">
+        <div class="container">
+            <div class="footer-contact">
+                <h5>
+                    <i class="fa-solid fa-chart-simple logo"></i>CoinMeter
+                </h5>
+                <p>
+                    Unit 5B, Empire Tower <br>
+                    123 Main Street <br>
+                    New York, NY
+                </p>
+            </div>
+            <div class="social-links">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <form>
+                <h5>Join mailing list</h5>
+                <input id="formInput" type="email" placeholder="Enter your email" required>
+                <button id="formBtn">Join</button>
+                <p id="confirmText" class="green hidden">Your email has been added to our mailing list!<br>
+                    But not really :)</p>
+            </form>
+        </div>
+        <p class="copyright">© 2023 CoinMeter - All rights reserved.</p>
+    </footer>
+
+    <!--Ellipse background-->
+    <div class="ellipse-1"></div>
+    <div class="ellipse-2"></div>
+</div>
+
+<!--GSAP-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+<!--Local js-->
+<script src="app.js"></script>
+<script src="gsap-config.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>
